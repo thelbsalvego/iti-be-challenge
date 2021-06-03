@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using BackEndChallenge.Domain.Services;
+using BackEndChallenge.UseCases;
 
 namespace BackEndChallenge
 {
@@ -27,7 +28,8 @@ namespace BackEndChallenge
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScopped(IPasswordValidationService, DefaultPasswordValidation);
+            services.AddScoped<IPasswordValidationService, DefaultPasswordValidation>();
+            services.AddScoped<IPasswordValidationUseCase, PasswordValidationUseCase>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

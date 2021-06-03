@@ -16,13 +16,8 @@ namespace BackEndChallenge.Domain.Models
         { 
             get 
             { 
-                return IsValid();
+                return _passwordValidationService.IsValid(_password);
             }
         }
-
-        private bool IsValid()
-        {
-            return _passwordValidationService.IsValid(_password);
-        }     
     }
 }
