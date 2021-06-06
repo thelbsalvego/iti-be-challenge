@@ -19,6 +19,12 @@ http://localhost:5000/api/password/digiteasenhadesejada
 **Por favor, não esqueça de *encodar* os caracteres especiais na URI!**
 
 ## Como executar os testes
+
+- No diretório do repo, execute o comando
+```
+dotnet test ./test/BackEndChallenge/BackEndChallenge.Test.csproj
+```
+
 ## Tecnologias
 
 As seguintes tecnologias foram utilizadas nesse projeto

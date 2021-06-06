@@ -6,7 +6,7 @@ namespace BackEndChallenge.Domain.Services
     {
         public bool IsValid(string password) 
         {
-            var rx = new Regex(@"^(?=.+[a-z])(?=.+[A-Z])(?=.+\d)(?=.+[!@#$%^&*()\-+])(?!.*(.+).+\1{1})[a-zA-Z0-9!@#$%^&*()\-+]{9,}$");
+            var rx = new Regex(@"^(?=.+[a-z])(?=.+[A-Z])(?=.+\d)(?=.+[!@#$%^&*()\-+])(?!.*(.+).*\1{1})[a-zA-Z0-9!@#$%^&*()\-+]{9,}$");
             return rx.IsMatch(password);
         }
     }
