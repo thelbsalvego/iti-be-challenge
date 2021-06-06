@@ -62,6 +62,6 @@ Temos apenas um caso de uso: *ValidatePassword*.
 ### Camada de Domínio 
 Nesta camada, seguindo os conceitos de DDD, temos o *model* (e *aggregate root*) Password, que representa um senha sendo enviada para processamento.
 
-O próprio modelo de domínio responderá se a senha é válida ou não. Este é um atributo do mesmo e uma função dele. Desta forma, não o domínio não fica "anêmico".
+O próprio modelo de domínio responderá se a senha é válida ou não. Este é um atributo do mesmo e uma função dele. Desta forma, o domínio não fica "anêmico".
 
 O *serviço de domínio* de validação é injetado dentro do modelo de domínio. Esta inversão de controle permitirá extensibilidade do domínio no quesito de regras de validação. 
