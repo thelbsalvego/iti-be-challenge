@@ -7,10 +7,7 @@ namespace BackEndChallenge.UseCases
     {
         private readonly IPasswordValidationService _passwordValidationService;
 
-        public ValidatePasswordUseCase(IPasswordValidationService passwordValidationService)
-        {
-            _passwordValidationService = passwordValidationService;
-        }
+        public ValidatePasswordUseCase(IPasswordValidationService passwordValidationService) => _passwordValidationService = passwordValidationService;
 
         public Password Validate(string password) => new Password(password, _passwordValidationService);
     }

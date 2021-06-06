@@ -16,6 +16,7 @@ dotnet run -p ./src/BackEndChallenge/BackEndChallenge.csproj
 ```
 http://localhost:5000/api/password/digiteasenhadesejada
 ```
+**Por favor, não esqueça de *encodar* os caracteres especiais na URI!**
 
 ## Como executar os testes
 ## Tecnologias
@@ -26,7 +27,15 @@ As seguintes tecnologias foram utilizadas nesse projeto
 
 ## Arquitetura
 
-*Premissa*: Dado que o desafio nos propõe a criação de uma API especializada em aplicar regras de validação de senha em uma string informada, tomamos a decisão de que estaremos construindo uma aplicação especializada no contexto "Password".
+*Premissa*: Dado que o desafio nos propõe a criação de uma API especializada em aplicar regras de validação de senha em uma string informada, estaremos construindo uma aplicação especializada no contexto "Password".
+
+A aplicação terá 3 camadas (da mais externa para a mais interna):
+
+| Ordem |    Camada    |
+|-------|--------------|
+| 1     | Apresentação |
+| 2     | Use-Cases    |
+| 3     | Domínio      |
 
 ### Camada de Apresentação
 Decidiu-se utilizar o **ASP.NET Core Web Api** por conta dos templates, scaffolding e configurações que o framework oferece *out-of-box*, acelerando o processo de criação do projeto.

@@ -29,7 +29,7 @@ namespace BackEndChallenge
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IPasswordValidationService, DefaultPasswordValidation>();
-            services.AddScoped<IPasswordValidationUseCase, PasswordValidationUseCase>();
+            services.AddScoped<IValidatePasswordUseCase, ValidatePasswordUseCase>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
