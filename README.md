@@ -16,7 +16,7 @@ dotnet run -p ./src/BackEndChallenge/BackEndChallenge.csproj
 ```
 http://localhost:5000/api/password/digiteasenhadesejada
 ```
-**Por favor, não esqueça de *encodar* os caracteres especiais na URI!**
+**!!! Por favor, não esqueça de *encodar* os caracteres especiais na URI !!!**
 
 ## Como executar os testes
 
